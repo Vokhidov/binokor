@@ -68,6 +68,17 @@ section{
 .navbar-item{
     display: flex;
 }
+.menu{
+    display: none;
+}
+.line{
+    background-color: rgb(255,237,0);
+    width: 25px;
+    height: 3px;
+    margin-top: 5px;
+    border-radius: 6px;
+    transition: all 0.4s ease-in-out;
+}
 .price{
     width: 42px;
     text-align: center;
@@ -228,10 +239,23 @@ section{
 /* Delivery */
 .delivery-card{
     padding: 15px 20px;
-    box-shadow:1px 16px 15px 1px rgba(153, 153, 153, 0.34);
+    box-shadow:0px 4px 14px 2px rgba(30, 30, 60, 0.23);
     font-size: 15px;
     color: rgb(136,135,135);
     border-radius: 6px;
+    min-height: 75px;
+}
+.delivery-card::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(255,237,0);
+    width: 4px;
+    height: 60px;
+    top: 20%;
+    left: 3%;
+}
+.delivery-card__text{
+    min-height: 66px;
 }
 /* News */
 .news-title{
@@ -249,6 +273,9 @@ section{
 }
 .news-row{
     padding-top: 50px;
+}
+.news-card{
+    min-height: 420px;
 }
 .news-card__title{
     color: rgb(59,59,59);
@@ -367,4 +394,159 @@ footer{
 }
 .footer-email, .phone-number{
     font-size: 14px;
+}
+.price-list{
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 50%;
+}
+.footer-line{
+    width: 100%;
+    background-color: rgb(126,126,126);
+    height: 1px;
+    margin: 20px 0 0;
+}
+.licence, .company{
+    font-size: 15px;
+    padding: 10px 0;
+}
+.osg{
+    color: rgb(126,126,126);
+}
+.footer-bottom{
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width:768px){
+    .logo{
+        width: 20%;
+        background-color: transparent;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        top: 7%;
+        right: 10%;
+    }
+    nav{
+        background-color: white;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 22;
+        padding: 60px 40px;
+}
+    .navbar-list{
+        flex-direction: column;
+        height: 80vh;
+        text-align: center;
+        align-items: center;
+    }
+    .navbar-link{
+        display: block;
+    }
+}
+@media only screen and (max-width:500px){
+    .carousel-cards{
+        display: none;
+    }
+}
+
+
+/*********** About page Styles ***********/
+.header-background{
+    background-image: url('../images/section-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30vh;
+    background-size: cover;
+    position: relative;
+}
+.header-title{
+    height: 30vh;
+    align-items: center;
+    display: flex;
+    color:white
+}
+/*Advantage*/
+.advantage-card{
+    padding: 20px;
+    box-shadow: 0px 4px 34px 2px rgba(30, 30, 60, 0.23);
+    border-radius: 10px;
+    max-width: 258px;
+    font-size: 14px;
+    margin-top: 10px;
+    min-height: 170px;
+}
+/******* history ********/
+.history-card__number{
+    font-weight: 700;
+    font-size: 20px;
+    border: 1px solid  rgb(255,237,0);
+    padding: 15px 0;
+    text-align: center;
+    align-items: center;
+}
+.card__title{
+    font-weight: 600;
+    font-size: 16px;
+}
+.card__info{
+    font-size: 15px;
+    color: rgb(136,135,135);
+}
+.statistics{
+    position: relative;
+}
+
+.statistics-card__img{
+   position: absolute;
+    left: -5%;
+    bottom: -20%; 
+}
+.statistics__row{
+    padding-top: 30px;
+}
+.statistics-container::before{
+    height: 25vh;
+    top: -25%;
+}
+.statistics-card::after{
+    content: '';
+    position: absolute;
+    left: 15px;
+    bottom: -100%;
+    width: 85%;
+    height: 1px;
+    background-color: rgba(146, 146, 146, 0.349);
+    margin: 0 auto;
+}
+.stat-item::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -110%;
+    left: 15px;
+    border: 3px solid rgb(255,237,0);
+}
+.contact-footer{
+    margin-top: 100px;
+}
+
+.jeleza-text{
+    font-weight: 600;
+    padding-top: 30px;
+}
+.jeleza-price{
+    background-color: rgb(255,237,0);
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 50%;
+    color: rgb(50, 50, 50);
+    padding: 10px 20px;
 }
